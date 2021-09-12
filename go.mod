@@ -3,6 +3,7 @@ module user-store
 go 1.16
 
 require (
+	github.com/DATA-DOG/go-sqlmock v1.5.0
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d // indirect
 	github.com/go-openapi/analysis v0.20.1 // indirect
 	github.com/go-openapi/errors v0.20.1
@@ -20,6 +21,7 @@ require (
 	github.com/jessevdk/go-flags v1.5.0
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-sqlite3 v1.14.8
+	github.com/stretchr/testify v1.7.0
 	github.com/vrischmann/envconfig v1.3.0
 	go.mongodb.org/mongo-driver v1.7.2 // indirect
 	golang.org/x/net v0.0.0-20210908191846-a5e095526f91
