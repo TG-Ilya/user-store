@@ -78,12 +78,7 @@ func (ur *userRepository) DeleteUser(db *sqlite.Storage, id int64) error {
 func (ur *userRepository) UpdateUser(db *sqlite.Storage, id int64, usr *models.User) (*models.User, error) {
 	query := fmt.Sprintf("UPDATE users SET name = $1, birth_date = $2 where id = $3 RETURNING id, name, birth_date")
 	if err := db.Sql.QueryRow(query, usr.Name, usr.BirthDate, id).Scan(&usr.ID, &usr.Name, &usr.BirthDate); err != nil {
-		fmt.Println("AAAAAA")
-		fmt.Println(err)
 		return nil, err
 	}
 	return usr, nil
 }
-
-
-

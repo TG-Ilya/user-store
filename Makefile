@@ -24,4 +24,4 @@ build: units ## Build container image
 
 run: build ## Run container image
 	@echo "Run container image..."
-	@docker run --rm -p 8080:8080 ilyatg/userstore:1.0.0
+	@docker run --rm -p 8080:8080 -e PORT=9090 ilyatg/userstore:1.0.0
